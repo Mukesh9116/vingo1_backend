@@ -19,7 +19,7 @@ const server=http.createServer(app)
 
 const io=new Server(server,{
    cors:{
-    origin:"https://vingo1.onrender.com",
+    origin:"https://vingo1-frontend.vercel.app",
     credentials:true,
     methods:['POST','GET']
 }
@@ -45,6 +45,7 @@ server.listen(port,()=>{
     connectDb()
     console.log(`server started at ${port}`)
 })
+
 
 
 
