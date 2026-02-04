@@ -19,7 +19,7 @@ const server=http.createServer(app)
 
 const io=new Server(server,{
    cors:{
-    origin:"*",
+    origin:"https://vingo1.onrender.com",
     credentials:true,
     methods:['POST','GET']
 }
@@ -29,7 +29,7 @@ app.set("io",io)
 
 const port=process.env.PORT || 5000
 app.use(cors({
-    origin:"*",
+    origin:"https://vingo1.onrender.com",
     credentials:true
 }))
 app.use(express.json())
@@ -45,6 +45,7 @@ server.listen(port,()=>{
     connectDb()
     console.log(`server started at ${port}`)
 })
+
 
 
 
